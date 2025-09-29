@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMVIDH 2K25</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Jacquard+24+Charted&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+<body class="selection:bg-primary-color selection:text-white">
+    <canvas id="fireworks-canvas"></canvas>
+    
+    <header class="header">
+    <nav class="nav">
+      <div class="logo-container">
+        <div id="logo" class="logo-placeholder">
+          <a href="https://scas.sim.edu.in" target="_blank">
+            <img src="https://scas.sim.edu.in/wp-content/uploads/2023/05/cropped-LOGO-e1685437397665.jpg" alt="Logo">
+          </a>
+        </div>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="https://forms.gle/2bbduQPoxbrnjnFA9" class="register-btn" target="_blank">REGISTER</a>
+
+      <button id="menu-button" class="menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#teams">Teams</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://forms.gle/2bbduQPoxbrnjnFA9" target="_blank" class="register-btn-mobile">REGISTER NOW</a>
+    </div>
+    </header>
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center p-6">
+      <div class="space-y-6 fade-in mx-auto">
+        <h1 id="heading" class="hero-title">
+          SAMVIDH 2K25
+        </h1>
+        <p class="hero-subtitle">
+          U    n    l    e    a    s    h     -    K    n    o    w    l    e    d    g    e.
+        </p>
+
+
+        <div class="pt-4">
+            <div class="flip-countdown"></div>
+
+          <a href="#events" id="hero-button" class="explore-btn">Explore Events</a>
+          <button id="celebrate-btn" class="celebrate-btn">Celebrate</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 section-bg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-center mb-16 text-text-light fade-in">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <img src="https://scas.sim.edu.in/wp-content/uploads/2025/02/SANJEEV-SIR-e1738818619350.png" alt="Sanjeev Group of Colleges" class="rounded-xl w-full md:w-1/2 object-cover shadow-2xl transition-transform duration-300 transform hover:scale-105 mx-auto ceo" id="ceo">
+                <div class="text-center md:text-left md:w-1/2 mx-auto">
+                    <p class="text-sm md:text-base text-gray-400 mb-4">
+                        Based in Kakinada, the Sanjeev Group of Educational Institutions offer a comprehensive academic journey from school to postgraduate programs. For over a decade, we've focused on shaping future leaders with high-quality education, character building, and life skills. Our alumni's success reflect our commitment to excellence.
+                    </p>
+                    <p class="text-sm md:text-base text-gray-400">
+                        SAMVIDH is the highly anticipated Annual State-Level Degree College Event, organized by the Sanjeev Group of Colleges. It is a vibrant & robust platform that brings together approximately 900 (Nine hundred) young minds to showcase their talent, creativity, and innovation through a blend of technical and cultural events.
+                        SAMVIDH fosters a spirit of healthy competition and collaboration, providing a valuable opportunity for students to network, learn from their peers, and exhibit their skills to a wider audience. With an exciting mix of knowledge-driven contests, cultural showcases, and fun-filled activities, SAMVIDH-2025 promises to be an unforgettable celebration of youth and excellence. Sanjeev Group of Colleges is committed to making SAMVIDH a resounding success, contributing significantly to the holistic development of the participating students.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="py-20 px-2 flex flex items-center justify-center section-bg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl lg:text-5xl font-extrabold mb-16 text-text-light fade-in">Last Year's Memories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" style="padding: 20px;">
+                <img src="https://sim.edu.in/wp-content/uploads/2025/09/SVS_6804-scaled.jpg" alt="Event Memory 1" class="rounded-xl w-full h-auto object-cover shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer mx-auto">
+                <img src="https://sim.edu.in/wp-content/uploads/2025/09/SVS_7523-scaled.jpg" alt="Event Memory 3" class="rounded-xl w-full h-auto object-cover shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer mx-auto">
+                <img src="https://sim.edu.in/wp-content/uploads/2025/09/samidh-2vk25-scaled.jpg" alt="Event Memory 4" class="rounded-xl w-full h-auto object-cover shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer mx-auto">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contests" class="py-12 md:py-20 px-4 bg-card-dark rounded-xl shadow-2xl section-bg">
+        <div class="container mx-auto">
+            <h3 class="flex justify-center items-center text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 fade-in text-center">Digital Contests</h3>
+            <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style="padding: 20px;">
+                <div data-modal-target="dynamic-modal" 
+                     data-title="EM-OTO" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/24.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="B Praneeth" 
+                     data-phone="9346637413"
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="flex-none w-[280px] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/24.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold text-center">EM-OTO</h3>
+                    <p class="text-sm text-gray-400 text-center">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="SHORT FILM" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/25.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="Ramya" 
+                     data-phone="9876543210"
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="flex-none w-[280px] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/25.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold text-center">SHORT FILM</h3>
+                    <p class="text-sm text-gray-400 text-center">Tap to know more...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="events" class="py-20 px-4 section-bg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-center mb-10">Events</h2>
+            <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style="padding: 20px;">
+                <div data-modal-target="dynamic-modal" 
+                     data-title="THE AD LAB" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/A.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="B Praneeth" 
+                     data-phone="9346637413" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/A.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">THE AD LAB</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="QUEST FEST" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/B.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="Ramesh Kumar" 
+                     data-phone="9988776655"
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9" 
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/B.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">QUEST FEST</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="TECH TACTIX" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/F.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="K.Madhuri" 
+                     data-phone="7981631798" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/F.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">TECH TACTIX</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="BUG SMASHERS" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/C.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="ARAVIND" 
+                     data-phone="7981631798" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/C.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">BUG SMASHERS</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="CHROMO VISION" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/L.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="SOWMYA" 
+                     data-phone="8790046677" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/L.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">CHROMO VISION</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="NEURON NAVIGATORS" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/K.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="Jyothi" 
+                     data-phone="8790046677" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/K.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">NEURON NAVIGATORS</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+                <div data-modal-target="dynamic-modal" 
+                     data-title="FOOD NOVA TECHNOLOGY" 
+                     data-image="https://tejasai2389-rgb.github.io/looooooooogo/M.png" 
+                     data-description="A platform for students to showcase creativity and innovation with impactful ads, blending marketing skills to inspire audiences." 
+                     data-coordinator="shannukh" 
+                     data-phone="9014653200" 
+                     data-link="https://forms.gle/2bbduQPoxbrnjnFA9"
+                     class="min-w-[80%] sm:min-w-[45%] lg:min-w-[22%] bg-card-dark p-4 rounded-2xl shadow-xl card-animate snap-center cursor-pointer">
+                    <img src="https://tejasai2389-rgb.github.io/looooooooogo/M.png" class="rounded-xl mb-4 w-full">
+                    <h3 class="text-xl font-bold">FOOD NOVA TECHNOLOGY</h3>
+                    <p class="text-sm text-gray-400">Tap to know more...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="teams" class="py-20 px-4 section-bg">
+        <div class="container mx-auto text-center" style="padding: 20px;">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-center mb-10">Our Teams</h2>
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="px-6 py-2 rounded-full font-semibold text-sm transition-colors duration-200 team-tab" data-target="leadership-team">Leadership</button>
+                <button class="px-6 py-2 rounded-full font-semibold text-sm transition-colors duration-200 team-tab" data-target="hods-team">HODs</button>
+                <button class="px-6 py-2 rounded-full font-semibold text-sm transition-colors duration-200 team-tab active" data-target="students-team">Students</button>
+            </div>
+            
+            <div id="team-container" class="team-container relative">
+                <div id="leadership-team" class="mb-12 hidden">
+                    <h3 class="text-3xl font-bold mb-6">Leadership</h3>
+                    <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Principal Name</h3>
+                            <p class="text-gray-400">Principal</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Manager Name</h3>
+                            <p class="text-gray-400">Manager</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Treasurer Name</h3>
+                            <p class="text-gray-400">Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hods-team" class="mb-12 hidden">
+                    <h3 class="text-3xl font-bold mb-6">HODs</h3>
+                    <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">HOD Name 1</h3>
+                            <p class="text-gray-400">HOD, Dept. 1</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">HOD Name 2</h3>
+                            <p class="text-gray-400">HOD, Dept. 2</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">HOD Name 3</h3>
+                            <p class="text-gray-400">HOD, Dept. 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="students-team" class="mb-12">
+                    <h3 class="text-3xl font-bold mb-6">Students</h3>
+                    <div class="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Student Name 1</h3>
+                            <p class="text-gray-400">Event Coordinator</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Student Name 2</h3>
+                            <p class="text-gray-400">Marketing Lead</p>
+                        </div>
+                        <div class="flex-none w-[280px] bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center">
+                            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full w-24 h-24 mx-auto mb-4">
+                            <h3 class="text-2xl font-bold">Student Name 3</h3>
+                            <p class="text-gray-400">Logistics Head</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 section-bg" style="padding: 0 auto;">
+        <div class="container mx-auto text-center" style="padding: 0 auto;">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-center mb-10">Let's Meet</h2>
+            <p class="text-lg md:text-2xl font-light text-gray-400 max-w-2xl mx-auto">
+                @ Suryakala Mandir, Kakinada
+            </p>
+            <div class="mt-8">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Suryakala+Mandir,+Kakinada,+Andhra+Pradesh" target="_blank" class="px-6 py-3 rounded-full text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="dynamic-modal" class="modal-wrapper" data-modal>
+        <div class="modal-content">
+            <button class="modal-close-btn close-btn" onclick="close();"><i class="fas fa-times"></i></button>
+            <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center mt-6" style="display: block;">
+                <div class="flex-shrink-0" style="width: 100%;" >
+                    <img id="modal-image" src="" alt="Event Poster" style="width:100%;">
+                </div>
+                <div class="text-center md:text-left" style="width: 100%;">
+                    <h3 id="modal-title" class="text-2xl md:text-3xl font-bold mb-2"></h3>
+                    <p id="modal-description" class="text-base md:text-lg text-gray-400 mb-4"></p>
+                    <div class="space-y-4 text-left">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1">Coordinators:</h4>
+                            <ul class="text-gray-400 space-y-1 text-sm md:text-base">
+                                <li style="font-size: 1rem;">**Student:** <span id="modal-coordinator" style="font-size: 1rem; font-weight: 800;" ></span><span id="modal-phone" style="font-size: 1rem; font-weight: 800;"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a id="modal-register-btn" href="#" target="_blank" class="celebrate-btn">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center section-bg">
+        <div class="overflow-hidden">
+            <p class="whitespace-nowrap animate-marquee text-gray-400 text-sm">
+                Sanjeev Group of Colleges - Sanjeev Group of Colleges - Sanjeev Group of Colleges - Sanjeev Group of Colleges - Sanjeev Group of Colleges - Sanjeev Group of Colleges
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
