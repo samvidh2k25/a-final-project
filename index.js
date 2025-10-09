@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	function createFirework(x, y) {
-		const particleCount = 100;
+		const particleCount = 200;
 		const hue = Math.random() * 360;
 		const color = `hsl(${hue}, 100%, 50%)`;
 		for (let i = 0; i < particleCount; i++) {
@@ -190,4 +190,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	
+
 });
